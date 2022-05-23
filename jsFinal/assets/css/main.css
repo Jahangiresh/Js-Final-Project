@@ -633,7 +633,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
 }
 
 .section-body .section-body-grid .owl-carousel .item .item-hover-icons .hover-icon-1 {
