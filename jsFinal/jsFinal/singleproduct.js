@@ -66,3 +66,23 @@ $('#owl2').owlCarousel({
       }
   }
 })
+
+let minus=document.querySelector('#minus')
+let plus=document.querySelector('#plus')
+let count=document.querySelector('#count')
+
+
+var clicks=0
+plus.addEventListener('click',function(){
+  clicks+=1
+  document.querySelector('#count').innerHTML=clicks;
+})
+
+minus.addEventListener('click',function(){
+ if(clicks>0){
+  clicks-=1
+ }
+ document.querySelector('#count').innerHTML=clicks;
+})
+
+
