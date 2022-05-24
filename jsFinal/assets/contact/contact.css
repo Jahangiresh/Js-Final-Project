@@ -408,6 +408,115 @@
   color: #e3a51e;
 }
 
+.container {
+  padding: 80px 0;
+}
+
+@media (max-width: 990px) {
+  .container .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .row .col-left {
+    width: 100%;
+  }
+  .container .row .col-right {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+.container .row .col-right h2 {
+  margin: 0;
+  padding-bottom: 30px;
+  color: #333333;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding-bottom: 30px;
+}
+
+.container .row .col-right p {
+  color: #666666;
+  padding-bottom: 30px;
+}
+
+.container .row .col-right ul {
+  padding: 0;
+}
+
+.container .row .col-right ul li {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.container .row .col-right h3 {
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+
+.container .row .col-left h2 {
+  margin: 0;
+  padding-bottom: 30px;
+  color: #333333;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding-bottom: 30px;
+}
+
+.container .row .inputs-class1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.container .row .inputs-class1 input {
+  width: 100%;
+  border: none;
+  padding: 10px 10px;
+  border-bottom: 3px solid transparent;
+  background-color: #f3f6f5;
+  margin-bottom: 30px;
+}
+
+.container .row .text-class input {
+  width: 100%;
+  border: none;
+  padding: 10px 10px;
+  border-bottom: 3px solid transparent;
+  background-color: #f3f6f5;
+  margin-bottom: 30px;
+  height: 150px;
+}
+
+.container .row button {
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: #e3a51e;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  display: inline-block;
+  padding: 14px 25px;
+  background-color: #333333;
+  text-transform: uppercase;
+}
+
 .footer {
   background: #f0f0f0;
 }
