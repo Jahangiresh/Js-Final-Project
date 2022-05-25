@@ -407,8 +407,9 @@ align-items: center;
           }
           //page name bitdi
 
-.container{
+.main-container{
   padding: 80px 0;
+ 
     .row{
       @media (max-width: 990px) {
         display: flex;
@@ -592,5 +593,5 @@ align-items: center;
           }
           }
               
-          
+      
           

@@ -1,4 +1,116 @@
+let eye=document.querySelector("#eye-icon")
+let productBox=document.querySelector('#product-view-box')
+
+let content=document.querySelector('#cart-content')
+let cancel=document.querySelector('#x-button')
+let cart=document.querySelector('#bag-icon')
+let cartWrapper=document.querySelector('#wrapper')
+let menuWrapper=document.querySelector('#menu-wrapper')
+let cancelmenu=document.querySelector('#menu-x-button')
+let body=document.querySelector('#body')
+let menuicon=document.querySelector('#menu-icon')
+let x=document.querySelector('#x')
+
+eye.addEventListener('click', function(){
+    
+    productBox.style.bottom="100px"
+    body.style.filter="brightness(29%)"
+    body.style.backgroundColor="#fff"
+    productBox.style.display="block"
+ })
+
+ x.addEventListener('click', function(){
+    productBox.style.bottom="1000px"
+    body.style.filter="brightness(100%)"
+ })
+
+menuicon.addEventListener('click',function(){
+    menuWrapper.style.left=0
+    body.style.filter = "brightness(20%)"
+    body.style.backgroundColor = "#fff"
+    body.style.cursor="crosshair"
+})
+cancelmenu.addEventListener('click', function(){
+    menuWrapper.style.left="-450px"
+    body.style.filter = "brightness(100%)"
+    body.style.backgroundColor = "#fff"
+    body.style.cursor="default"
+})
+
+cart.addEventListener('click', function(){
+    cartWrapper.style.right=0
+    body.style.filter = "brightness(20%)"
+    body.style.backgroundColor = "#fff"
+    body.style.cursor="crosshair"
+})
+
+cancel.addEventListener('click', function(){
+    cartWrapper.style.right="-450px"
+    body.style.filter = "brightness(100%)"
+    body.style.backgroundColor = "#fff"
+    body.style.cursor="default"
+})
+
+
+function zoom(e){
+    var zoomer = e.currentTarget;
+    e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+    e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+    x = offsetX/zoomer.offsetWidth*100
+    y = offsetY/zoomer.offsetHeight*100
+    zoomer.style.backgroundPosition = x + '% ' + y + '%';
+  }
+
+  let zoommain=document.querySelector('#zoom')
+  let zoomproduct1=document.querySelector('#zoom-product1')
+  let zoomproduct2=document.querySelector('#zoom-product2')
+  let zoomproduct3=document.querySelector('#zoom-product3')
+  let zoomproduct4=document.querySelector('#zoom-product4')
+
+zoomproduct1.addEventListener("click",function(){
+  zoommain.innerHTML=zoomproduct1.innerHTML
+zoommain.style.backgroundImage = "url(https://htmldemo.net/juan/juan/assets/img/product/product-details-img3.jpg)";
+})
+zoomproduct2.addEventListener("click",function(){
+  zoommain.innerHTML=zoomproduct2.innerHTML
+zoommain.style.backgroundImage = "url(https://htmldemo.net/juan/juan/assets/img/product/product-details-img2.jpg)";
+})
+zoomproduct3.addEventListener("click",function(){
+  zoommain.innerHTML=zoomproduct3.innerHTML
+zoommain.style.backgroundImage = "url(https://htmldemo.net/juan/juan/assets/img/product/product-details-img1.jpg)";
+})
+zoomproduct4.addEventListener("click",function(){
+  zoommain.innerHTML=zoomproduct4.innerHTML
+zoommain.style.backgroundImage = "url(https://htmldemo.net/juan/juan/assets/img/product/product-details-img4.jpg)";
+})
+
+
+
+
+
+
+
+
+let minus=document.querySelector('#minus')
+let plus=document.querySelector('#plus')
+let count=document.querySelector('#count')
+
+
+var clicks=0
+plus.addEventListener('click',function(){
+  clicks+=1
+  document.querySelector('#count').innerHTML=clicks;
+})
+
+minus.addEventListener('click',function(){
+ if(clicks>0){
+  clicks-=1
+ }
+ document.querySelector('#count').innerHTML=clicks;
+})
+
 let scrollHeader=document.querySelector("#bottom-scroll")
+
 
 
 document.addEventListener('scroll', function(){
@@ -55,10 +167,10 @@ $('#owl2').owlCarousel({
     nav:true,
     responsive:{
         0:{
-            items:2
+            items:1
         },
         600:{
-            items:2
+            items:1
         },
         1000:{
             items:4

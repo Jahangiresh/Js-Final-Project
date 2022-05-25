@@ -26,9 +26,109 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
 
 <body>
+
+  <!-- //product view bashladi  -->
+  <div id="product-view-box" class="product-view">
+    <div class="zoom-container">
+          <span id="x">X</span>
+    <div class="zoom-row">
+     <div class="zoom-box">
+       <figure id="zoom" class="zoom" onmousemove="zoom(event)">
+         <img src="	https://htmldemo.net/juan/juan/assets/img/product/product-details-img1.jpg" />
+       </figure>
+       <div class="zoom-box-products">
+         <div id="zoom-product1" class="zoom-product1">
+           <img src="https://htmldemo.net/juan/juan/assets/img/product/product-details-img3.jpg" alt="">
+         </div>
+         <div id="zoom-product2" class="zoom-product1">
+           <img src="	https://htmldemo.net/juan/juan/assets/img/product/product-details-img2.jpg" alt="">
+         </div>
+         <div id="zoom-product3" class="zoom-product1">
+          <img src="	https://htmldemo.net/juan/juan/assets/img/product/product-details-img1.jpg" alt="">
+         </div>
+         <div id="zoom-product4" class="zoom-product1">
+          <img src="https://htmldemo.net/juan/juan/assets/img/product/product-details-img4.jpg" alt="">
+         </div>
+       </div>
+     </div>
+     <div class="zoom-content-box">
+       <h3>Primitive Mens Premium Shoes</h3>
+       <span><a href="">1 Review(s)</a></span>
+       <div class="price-box">
+         <span>$70.00</span>
+         <del>$90.00</del>
+       </div>
+       <p>psumsi aliquid nostrum provident maxime cupiditate saepe distinctio possimus?</p>
+       <div class="button-box">
+         <div class="product-counter">
+           <span id="minus">-</span>
+           <span id="count">1</span>
+           <span id="plus">+</span>
+         </div>
+         <button>ADD TO CART</button>
+       </div>
+       <div class="in-stock">
+         <h5>Aviability:</h5> <span>In Stock</span>
+       </div>
+       <div class="social-media-icons">
+         <h5>share</h5>
+         <ul>
+           <li><a href=""><i class="bi bi-facebook"></i></a></li>
+           <li> <a href=""><i class="bi bi-twitter"></i></a></li>
+           <li><a href=""><i class="bi bi-facebook"></i></a></li>
+           <li><a href=""><i class="bi bi-facebook"></i></a></li>
+         </ul>
+       </div>
+     </div>
+    </div>
+   </div>
+  </div>
   
+  <!-- product view bitdi  -->
+
+  <!-- cart wrapper start   -->
+  <div id="wrapper" class="cart-wrapper">
+  <div id="x-button" class="cart-wrapper-x">
+    <i class="bi bi-x-lg"></i>
+  </div>
+  <div id="cart-content" class="cart-wrapper-content">
+    <p>your cart is empty</p>
+  </div>
+  <div class="cart-wrapper-buttons">
+   <button id="view-cart"><a href=""><i class="bi bi-cart"></i> view cart</a></button>
+   <button id="checkout"><a href=""><i class="bi bi-arrow-up-right"></i> checkout</a></button>
+  </div>
+  </div>
+  <!-- cart wrapper end -->
+
+<!-- //menu-wrapper bashladi 000 -->
+<div id="menu-wrapper" class="menu-wrapper">
+  <div id="menu-x-button" class="menu-wrapper-x">
+    <i class="bi bi-x-lg"></i>
+  </div>
+  <div class="menu-wrapper-content">
+    <input type="text" name="" id="" placeholder="search">
+    <ul>
+      <li>home <span>+</span></li>
+      <li>pages<span>+</span></li>
+      <li>shop <span>+</span></li>
+      <li>blog <span>+</span></li>
+      <li>contact us</li>
+    </ul>
+    <hr>
+    <p>Currency</p>
+    <p>my account</p>
+    <p>012 479 66 66</p>
+    <p>info@example.com</p>
+  </div>
+  </div>
+<!-- // menu wrapper bitdi 111 -->
+
+  <div id="body" class="all-page">
+
+ 
   <div class="header">
-      <div class="container">
+      <div class="container container-header">
           <div class="logo d-lg-none">
               <img src="https://htmldemo.net/juan/juan/assets/img/logo/logo.png" alt="logo.png">
           </div>
@@ -53,8 +153,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           </div>
           <div class="menuicons d-lg-none">
             <ul>
-                <li><a href=""><i class="bi bi-bag"></i></i></a></li>
-                <li><a href=""><i class="bi bi-list"></i></a></li>
+                <li><a  href=""><i class="bi bi-bag"></i></i></a></li>
+                <li id="menu-icon"><i class="bi bi-list"></i></a></li>
             </ul>
         </div>
       </div>
@@ -122,7 +222,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 <li><a href="">Home version</a></li>
               </ul>
               </div></li>
-          <li id="blog"><a href="">blog <i class="bi bi-chevron-down"></i></a>
+          <li id="blog"><a href="blog.html">blog <i class="bi bi-chevron-down"></i></a>
             <div class="blog-hover">
               <ul>
                 <li><a href="">Home version</a></li>
@@ -133,7 +233,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 <li><a href="">Home version</a></li>
               </ul>
               </div></li>
-          <li><a href="">Contact us </a></li>     
+          <li><a href="contact.html">Contact us </a></li>     
          </ul>
          <!-- bottom header hover bashladi  -->
          
@@ -141,9 +241,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         </div>
         <div class="bottom-header-icons">
           <ul>
-            <li><a href=""><i class="bi bi-search"></i></a></li>
-            <li><a href=""><i class="bi bi-gear"></i></a></li>
-            <li><a href=""><i class="bi bi-bag"></i></a></li>
+            <li><i class="bi bi-search"></i></a></li>
+            <li><i class="bi bi-gear"></i></a></li>
+            <li id="bag-icon"><i class="bi bi-bag"></i></a></li>
           </ul>
         </div>
     </div>
@@ -217,18 +317,21 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         <img src="https://htmldemo.net/juan/juan/assets/img/product/product-4.jpg" alt="">
        </div>
        <div class="owl-text-class">
-        <a href="">Leather men slipper</a>
+        <a href="product.html">Leather men slipper</a>
         <div class="pricebox">
           <span>$80.00</span>
           <del>$90.00</del>
         </div>
        </div>
 
-       <div class="item-hover-icons">
+     <div  class="icons-rails">
+      <div class="item-hover-icons">
       
-        <div class="hover-icon-1">
-          <i class="bi bi-eye-fill"></i>
-    
+       
+          <div id="eye-icon" class="hover-icon-1">
+            <i class="bi bi-eye-fill"></i>
+      
+         
         </div>
 
       
@@ -244,6 +347,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
          
 
       </div>
+     </div>
+      <!-- //item divi bitdi -->
       </div>
      
       <div class="item">
@@ -251,32 +356,34 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
          <img src="https://htmldemo.net/juan/juan/assets/img/product/product-5.jpg" alt="">
         </div>
         <div class="owl-text-class">
-         <a href="">Leather men slipper</a>
+         <a href="product.html">Leather men slipper</a>
          <div class="pricebox">
            <span>$80.00</span>
            <del>$90.00</del>
          </div>
         </div>
-        <div class="item-hover-icons">
-      
-          <div class="hover-icon-1">
-            <i class="bi bi-eye-fill"></i>
-      
-          </div>
-  
+        <div class="icons-rails">
+          <div class="item-hover-icons">
+          
+            <div id="eye-icon" class="hover-icon-1">
+              <i class="bi bi-eye-fill"></i>
         
-            <div class="hover-icon-2">
-              <i class="bi bi-bag-heart"></i>
             </div>
-         
-  
-       
-              <div class="hover-icon-3">
-                <i class="bi bi-heart-fill"></i>
+    
+          
+              <div class="hover-icon-2">
+                <i class="bi bi-bag-heart"></i>
               </div>
            
-  
-        </div>
+    
+         
+                <div class="hover-icon-3">
+                  <i class="bi bi-heart-fill"></i>
+                </div>
+             
+    
+          </div>
+         </div>
        </div>
      
        <div class="item">
@@ -284,32 +391,34 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
          <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg" alt="">
         </div>
         <div class="owl-text-class">
-         <a href="">Leather men slipper</a>
+         <a href="product.html">Leather men slipper</a>
          <div class="pricebox">
            <span>$80.00</span>
            <del>$90.00</del>
          </div>
         </div>
-        <div class="item-hover-icons">
-      
-          <div class="hover-icon-1">
-            <i class="bi bi-eye-fill"></i>
-      
-          </div>
-  
+        <div class="icons-rails">
+          <div class="item-hover-icons">
+          
+            <div id="eye-icon" class="hover-icon-1">
+              <i class="bi bi-eye-fill"></i>
         
-            <div class="hover-icon-2">
-              <i class="bi bi-bag-heart"></i>
             </div>
-         
-  
-       
-              <div class="hover-icon-3">
-                <i class="bi bi-heart-fill"></i>
+    
+          
+              <div class="hover-icon-2">
+                <i class="bi bi-bag-heart"></i>
               </div>
            
-  
-        </div>
+    
+         
+                <div class="hover-icon-3">
+                  <i class="bi bi-heart-fill"></i>
+                </div>
+             
+    
+          </div>
+         </div>
        </div>
      
        <div class="item">
@@ -317,32 +426,34 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
          <img src="	https://htmldemo.net/juan/juan/assets/img/product/product-2.jpg" alt="">
         </div>
         <div class="owl-text-class">
-         <a href="">Leather men slipper</a>
+         <a href="product.html">Leather men slipper</a>
          <div class="pricebox">
            <span>$80.00</span>
            <del>$90.00</del>
          </div>
         </div>
-        <div class="item-hover-icons">
-      
-          <div class="hover-icon-1">
-            <i class="bi bi-eye-fill"></i>
-      
-          </div>
-  
+        <div class="icons-rails">
+          <div class="item-hover-icons">
+          
+            <div id="eye-icon" class="hover-icon-1">
+              <i class="bi bi-eye-fill"></i>
         
-            <div class="hover-icon-2">
-              <i class="bi bi-bag-heart"></i>
             </div>
-         
-  
-       
-              <div class="hover-icon-3">
-                <i class="bi bi-heart-fill"></i>
+    
+          
+              <div class="hover-icon-2">
+                <i class="bi bi-bag-heart"></i>
               </div>
            
-  
-        </div>
+    
+         
+                <div class="hover-icon-3">
+                  <i class="bi bi-heart-fill"></i>
+                </div>
+             
+    
+          </div>
+         </div>
        </div>
       
   </div>
@@ -649,6 +760,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   </div>
 </div>
 
+</div>
 
 </body>
 
