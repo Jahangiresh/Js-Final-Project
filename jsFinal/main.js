@@ -132,16 +132,28 @@ document.addEventListener('scroll', function () {
 })
 
 
-let content = document.querySelector('#cart-content')
+// let content  =  document.getElementById("cart-content")
+// console.log(content)
 
-let addtocart1 = document.querySelector('#add-to-cart1')
+// let addtocart1 = document.querySelector('#add-to-cart1')
+
+// let counter=true;
+// addtocart1.addEventListener('click', () => {
+//     let newClass = document.createElement("div");
+//     let counter=false
+//     if(!counter){
+//         content.appendChild(newClass)
+//         newClass.classList.add("add-class")
+//         console.log("ADD",counter)
+//     }
+        
+    
+    
+//    counter=!counter;
+    
+// })
 
 
-addtocart1.addEventListener('click', () => {
-    let newClass = document.createElement("div");
-    content.appendChild(newClass)
-    newClass.classList.toggle("add-class")
-})
 
 var owl = $('#owl1');
 owl.owlCarousel({
@@ -257,6 +269,14 @@ $('#owl6').owlCarousel({
         }
     }
 })
+
+function addContent(){
+    const items = localStorage.getItem("items")
+    ? JSON.parse(localStorage.getItem("items"))
+    : [];
+    
+
+}
 
 function basket(id, img, title, price) {
     let items = localStorage.getItem("items")
