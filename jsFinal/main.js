@@ -266,13 +266,7 @@ $('#owl6').owlCarousel({
 
 //local fuckin storage start 
 
-function addContent() {
-    const items = localStorage.getItem("items")
-        ? JSON.parse(localStorage.getItem("items"))
-        : [];
 
-
-}
 
 function basket(id, img, title, price) {
     let items = localStorage.getItem("items")
@@ -287,7 +281,7 @@ function basket(id, img, title, price) {
             items.push({
                 item: {
                     id,
-                    img: `https://assets.adidas.com/images/${img}`,
+                    img: `https://${img}.jpg`,
                     title,
                     price,
                 },
@@ -299,7 +293,7 @@ function basket(id, img, title, price) {
         items.push({
             item: {
                 id,
-                img: `https://assets.adidas.com/images/${img}`,
+                img: `https://${img}.jpg`,
                 title,
                 price,
             },
@@ -309,6 +303,7 @@ function basket(id, img, title, price) {
 
 
     localStorage.setItem("items", JSON.stringify(items));
+    addToCart();
 }
 
 
@@ -318,47 +313,54 @@ function basket(id, img, title, price) {
 
 let cartContent = document.querySelector('#cart-wrapper-content')
 
-function addToCart(id, img, title, price) {
+function addToCart() {
+    cartContent.innerHTML=""
 
-    let items = localStorage.getItem("items")
+    const items = localStorage.getItem("items")
         ? JSON.parse(localStorage.getItem("items"))
         : [];
 
-    if (items.length > 0) {
+
         
+    if (items.length > 0) {
+        items.forEach(item => {
         cartContent.insertAdjacentHTML(`afterbegin`, ` <div class="add-cart">
         <div class="add-cart-x">
           <span id="delete-cart-item">x</span>
         </div>
         <div class="add-cart-img">
-          <img src="https://htmldemo.net/juan/juan/assets/img/cart/cart-1.jpg" alt="">
+          <img src="${item.item.img}" alt="">
       
         </div>
         <div class="add-cart-content">
           <h3>
-            <a href="">Flowers bouquet pink for all flower lovers</a>
+            <a href="">${item.item.title}</a>
           </h3>
-          <p>1 x <span> $100.00</span></p>
+          <p>1 x <span> ${item.item.price}</span></p>
 
         </div>
       </div>`)
+        });
 
-    }else{
-        cartContent.removeChild(removedchild)
+
+    }
+    else{
+        // let removedchild=document.querySelector('.add-cart')
+        // cartContent.removeChild(removedchild)
     }
 }
 addToCart()
 // dinamic cart adder end
-let removedchild=document.querySelector('.add-cart')
-let deleteitem = document.querySelector('#delete-cart-item')
-deleteitem.addEventListener('click', function () {
-    cartContent.removeChild(removedchild)
-    let items = localStorage.getItem("items")
-        ? JSON.parse(localStorage.removeItem("items"))  
-        : [];
+
+// let deleteitem = document.querySelector('#delete-cart-item')
+// deleteitem.addEventListener('click', function () {
+//     cartContent.removeChild(removedchild)
+//     let items = localStorage.getItem("items")
+//         ? JSON.parse(localStorage.removeItem("items"))  
+//         : [];
        
      
-})
+// })
 
 
 
