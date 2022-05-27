@@ -1,7 +1,6 @@
+//sliders start
 let eye = document.querySelector("#eye-icon")
 let productBox = document.querySelector('#product-view-box')
-
-
 
 let cancel = document.querySelector('#x-button')
 let cart = document.querySelector('#bag-icon')
@@ -52,7 +51,9 @@ cancel.addEventListener('click', function () {
     body.style.cursor = "default"
 })
 
+//sliders end
 
+// porduct zoom start 
 function zoom(e) {
     var zoomer = e.currentTarget;
     e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
@@ -85,12 +86,13 @@ zoomproduct4.addEventListener("click", function () {
     zoommain.style.backgroundImage = "url(https://htmldemo.net/juan/juan/assets/img/product/product-details-img4.jpg)";
 })
 
+// product zoom end 
 
 
 
 
 
-
+//product counter start 
 
 let minus = document.querySelector('#minus')
 let plus = document.querySelector('#plus')
@@ -109,6 +111,12 @@ minus.addEventListener('click', function () {
     }
     document.querySelector('#count').innerHTML = clicks;
 })
+
+//product counter end
+
+
+
+//header scroll start 
 
 let scrollHeader = document.querySelector("#bottom-scroll")
 
@@ -131,29 +139,11 @@ document.addEventListener('scroll', function () {
 
 })
 
-
-// let content  =  document.getElementById("cart-content")
-// console.log(content)
-
-// let addtocart1 = document.querySelector('#add-to-cart1')
-
-// let counter=true;
-// addtocart1.addEventListener('click', () => {
-//     let newClass = document.createElement("div");
-//     let counter=false
-//     if(!counter){
-//         content.appendChild(newClass)
-//         newClass.classList.add("add-class")
-//         console.log("ADD",counter)
-//     }
-        
-    
-    
-//    counter=!counter;
-    
-// })
+//hEADER SCROLL END
 
 
+
+//owl carusel start
 
 var owl = $('#owl1');
 owl.owlCarousel({
@@ -270,11 +260,17 @@ $('#owl6').owlCarousel({
     }
 })
 
-function addContent(){
+// owl carusel end  
+
+
+
+//local fuckin storage start 
+
+function addContent() {
     const items = localStorage.getItem("items")
-    ? JSON.parse(localStorage.getItem("items"))
-    : [];
-    
+        ? JSON.parse(localStorage.getItem("items"))
+        : [];
+
 
 }
 
@@ -314,6 +310,100 @@ function basket(id, img, title, price) {
 
     localStorage.setItem("items", JSON.stringify(items));
 }
+
+
+// local fuckin storage end  
+
+// DINAMIC PRODUCT CART ADDER START==========>
+
+let cartContent = document.querySelector('#cart-wrapper-content')
+
+function addToCart(id, img, title, price) {
+
+    let items = localStorage.getItem("items")
+        ? JSON.parse(localStorage.getItem("items"))
+        : [];
+
+    if (items.length > 0) {
+        
+        cartContent.insertAdjacentHTML(`afterbegin`, ` <div class="add-cart">
+        <div class="add-cart-x">
+          <span id="delete-cart-item">x</span>
+        </div>
+        <div class="add-cart-img">
+          <img src="https://htmldemo.net/juan/juan/assets/img/cart/cart-1.jpg" alt="">
+      
+        </div>
+        <div class="add-cart-content">
+          <h3>
+            <a href="">Flowers bouquet pink for all flower lovers</a>
+          </h3>
+          <p>1 x <span> $100.00</span></p>
+
+        </div>
+      </div>`)
+
+    }else{
+        cartContent.removeChild(removedchild)
+    }
+}
+addToCart()
+// dinamic cart adder end
+let removedchild=document.querySelector('.add-cart')
+let deleteitem = document.querySelector('#delete-cart-item')
+deleteitem.addEventListener('click', function () {
+    cartContent.removeChild(removedchild)
+    let items = localStorage.getItem("items")
+        ? JSON.parse(localStorage.removeItem("items"))  
+        : [];
+       
+     
+})
+
+
+
+
+// // DINAMIC PRODUCT CART ADDER START==========>
+
+// let cartContent = document.querySelector('#cart-wrapper-content')
+
+// function addToCart(id, img, title, price) {
+
+//     let items = localStorage.getItem("items")
+//         ? JSON.parse(localStorage.getItem("items"))
+//         : [];
+
+//     if (items.length > 0) {
+//         cartContent.insertAdjacentHTML(`afterbegin`, ` <div class="add-cart">
+//         <div class="add-cart-x">
+//           <span id="delete-cart-item">x</span>
+//         </div>
+//         <div class="add-cart-img">
+//           <img src="https://htmldemo.net/juan/juan/assets/img/cart/cart-1.jpg" alt="">
+      
+//         </div>
+//         <div class="add-cart-content">
+//           <h3>
+//             <a href="">Flowers bouquet pink for all flower lovers</a>
+//           </h3>
+//           <p>1 x <span> $100.00</span></p>
+
+//         </div>
+//       </div>`)
+
+//     }
+// }
+// addToCart()
+// // dinamic cart adder end
+
+// let deleteitem = document.querySelector('#delete-cart-item')
+// deleteitem.addEventListener('click', function () {
+//     let items = localStorage.getItem("items")
+//         ? JSON.parse(localStorage.removeItem("items"))
+//         : [];
+// })
+
+
 
 
 

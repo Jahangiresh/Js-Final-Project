@@ -375,44 +375,51 @@
 
 
   .add-cart {
-    
+
     width: 100%;
     height: 91px;
     // border-bottom: 1px solid #e5e5e5;
     margin-bottom: 20px;
     display: flex;
-    .add-cart-x{
+
+    .add-cart-x {
       position: absolute;
       right: 30px;
       // top: 20px;
     }
-    .add-cart-content{
+
+    .add-cart-content {
       padding: 0 10px;
-      P{
+
+      P {
         font-size: 14px;
         text-align: start;
-        span{
+
+        span {
           font-size: 14px;
           color: #e3a51e;
         }
       }
-      h3{
+
+      h3 {
         font-size: 14px;
         font-weight: 400;
         line-height: 1.5;
         text-align: start;
-        a{
+
+        a {
           color: #333333;
           text-decoration: none;
         }
       }
     }
-    .add-cart-img{
+
+    .add-cart-img {
       border: 1px solid #e5e5e5;
       width: 83px;
       height: 89px;
-     
-      img{
+
+      img {
         width: 100%;
         height: 100%;
       }
